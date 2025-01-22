@@ -1,0 +1,314 @@
+---
+title: "LLM Evaluation Cost Analysis"
+author: 
+  name: "Team: Human Machine Interaction"
+  affiliation: "Fraunhofer IIS" 
+format: 
+  pdf:
+    keep_tex: TRUE
+editor: visual
+editor_options: 
+  chunk_output_type: inline
+---
+
+## LLM Pilot
+
+```{r}
+library(openxlsx)
+```
+
+```{r}
+
+# File 1
+# Excel-Datei laden
+daten <- read.xlsx(xlsxFile = "Results_BinaryDecision 1.xlsx")
+
+# Konvertiere die Spalten in das POSIXct-Datumsformat
+daten$Date.started <- as.POSIXct(daten$`Date.started`, format="%Y-%m-%d %H:%M:%S")
+daten$Date.last_action <- as.POSIXct(daten$`Date.last.action`, format="%Y-%m-%d %H:%M:%S")
+
+# Berechne die Differenz zwischen den beiden Zeitstempeln
+daten$Time.difference <- difftime(daten$Date.last.action, daten$Date.started, units="mins")
+
+# Ausgabe anzeigen
+#View(daten)
+
+# Zeigt nur die Spalte 'Time_difference'
+print(daten$Time.difference)
+
+```
+
+```{r}
+# Convert the difftime to numeric (in minutes)
+numeric.diff <- as.numeric(daten$Time.difference)
+
+# Now get a proper summary of the time differences in numeric form
+summary(numeric.diff)
+
+```
+
+```{r}
+# File 2
+# Excel-Datei laden
+daten2 <- read.xlsx(xlsxFile = "Results_BWS (1).xlsx")
+
+# Konvertiere die Spalten in das POSIXct-Datumsformat
+daten2$Date.started <- as.POSIXct(daten2$`Date.started`, format="%Y-%m-%d %H:%M:%S")
+daten2$Date.last_action <- as.POSIXct(daten2$`Date.last.action`, format="%Y-%m-%d %H:%M:%S")
+
+# Berechne die Differenz zwischen den beiden Zeitstempeln
+daten2$Time.difference <- difftime(daten2$Date.last.action, daten2$Date.started, units="mins")
+
+# Ausgabe anzeigen
+#View(daten2)
+
+# Zeigt nur die Spalte 'Time_difference'
+print(daten2$Time.difference)
+
+```
+
+```{r}
+# Convert the difftime to numeric (in minutes)
+numeric.diff2 <- as.numeric(daten2$Time.difference)
+
+# Now get a proper summary of the time differences in numeric form
+summary(numeric.diff2)
+
+```
+
+```{r}
+
+# File 3
+# Excel-Datei laden
+daten3 <- read.xlsx(xlsxFile = "Results_AB (2).xlsx")
+
+# Konvertiere die Spalten in das POSIXct-Datumsformat
+daten3$Date.started <- as.POSIXct(daten3$`Date.started`, format="%Y-%m-%d %H:%M:%S")
+daten3$Date.last_action <- as.POSIXct(daten3$`Date.last.action`, format="%Y-%m-%d %H:%M:%S")
+
+# Berechne die Differenz zwischen den beiden Zeitstempeln
+daten3$Time.difference <- difftime(daten3$Date.last.action, daten3$Date.started, units="mins")
+
+# Ausgabe anzeigen
+# View(daten3)
+
+# Zeigt nur die Spalte 'Time_difference'
+print(daten3$Time.difference)
+```
+
+```{r}
+# Convert the difftime to numeric (in minutes)
+numeric.diff3 <- as.numeric(daten3$Time.difference)
+
+# Now get a proper summary of the time differences in numeric form
+summary(numeric.diff3)
+
+```
+
+```{r}
+
+# File 4
+# Excel-Datei laden
+daten4 <- read.xlsx(xlsxFile = "Results_DirectQuality (1).xlsx")
+
+# Konvertiere die Spalten in das POSIXct-Datumsformat
+daten4$Date.started <- as.POSIXct(daten4$`Date.started`, format="%Y-%m-%d %H:%M:%S")
+daten4$Date.last_action <- as.POSIXct(daten4$`Date.last.action`, format="%Y-%m-%d %H:%M:%S")
+
+# Berechne die Differenz zwischen den beiden Zeitstempeln
+daten4$Time.difference <- difftime(daten4$Date.last.action, daten4$Date.started, units="mins")
+
+# Ausgabe anzeigen
+# View(daten4)
+
+# Zeigt nur die Spalte 'Time_difference'
+print(daten4$Time.difference)
+```
+
+```{r}
+# Convert the difftime to numeric (in minutes)
+numeric.diff4 <- as.numeric(daten4$Time.difference)
+
+# Now get a proper summary of the time differences in numeric form
+summary(numeric.diff4)
+```
+
+```{r}
+# new table
+# Load necessary libraries
+library(tidyverse)
+library(gt)
+```
+
+# Duration of the test conditions
+
+```{r, echo=FALSE, warning=FALSE, fig.align='left'}
+
+  
+# Extract statistics for each dataset
+stats1 <- summary(numeric.diff)
+stats2 <- summary(numeric.diff2)
+stats3 <- summary(numeric.diff3)
+stats4 <- summary(numeric.diff4)
+
+# Create a data frame with Min, Median, Mean, and Max for each dataset
+summary_table <- tibble(
+  Dataset = c("Results_BinaryDecision 1", "Results_BWS (1)", "Results_AB (2)", "Results_DirectQuality (1)"),
+  Min = c(stats1["Min."], stats2["Min."], stats3["Min."], stats4["Min."]),
+  Median = c(stats1["Median"], stats2["Median"], stats3["Median"], stats4["Median"]),
+  Mean = c(stats1["Mean"], stats2["Mean"], stats3["Mean"], stats4["Mean"]),
+  Max = c(stats1["Max."], stats2["Max."], stats3["Max."], stats4["Max."])
+)
+
+# Create the publication-ready table using the gt package
+publication_table <- summary_table %>%
+  gt() %>%
+  # Add column labels
+  gt::cols_label(
+    Dataset = "Dataset",
+    Min = "Minimum",
+    Median = "Median",
+    Mean = "Mean",
+    Max = "Maximum"
+  ) %>%
+  # Add the title
+  gt::tab_header(
+    title = "Descriptive Statistics for Test Duration"
+  ) %>%
+  # Bold the column labels
+  gt::tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels(everything())
+  ) %>%
+  # Format numeric columns to two decimal places
+  fmt_number(
+    columns = vars(Min, Median, Mean, Max),
+    decimals = 2
+  )
+
+# Print the publication-ready table
+publication_table
+
+```
+
+# Cost per participant
+
+```{r, echo=FALSE, warning=FALSE, fig.align='left'}
+# Load necessary libraries
+#library(tidyverse)
+#library(gt)
+
+# Define the hourly rate
+hourly_rate <- 12
+
+# Calculate the mean time for each dataset (in minutes) and convert to hours
+mean_diff1 <- mean(numeric.diff) / 60  # Convert minutes to hours
+mean_diff2 <- mean(numeric.diff2) / 60
+mean_diff3 <- mean(numeric.diff3) / 60
+mean_diff4 <- mean(numeric.diff4) / 60
+
+# Calculate the cost for each dataset
+cost1 <- mean_diff1 * hourly_rate
+cost2 <- mean_diff2 * hourly_rate
+cost3 <- mean_diff3 * hourly_rate
+cost4 <- mean_diff4 * hourly_rate
+
+# Create a data frame to display the results
+cost_table <- tibble(
+  Dataset = c("Results_BinaryDecision 1", "Results_BWS (1)", "Results_AB (2)", "Results_DirectQuality (1)"),
+  Mean_Time_Hours = c(mean_diff1, mean_diff2, mean_diff3, mean_diff4),
+  Mean_Cost_Euros = c(cost1, cost2, cost3, cost4)
+)
+
+# Create the publication-ready table 
+publication_table <- cost_table %>%
+  gt() %>%
+  gt::cols_label(
+    Dataset = "Dataset",
+    Mean_Time_Hours = "Mean Time (Hours)",
+    Mean_Cost_Euros = "Mean Cost (Euros)"
+  ) %>%
+  gt::fmt_currency(columns = vars(Mean_Cost_Euros), currency = "EUR") %>%
+  gt::tab_header(
+    title = "Cost and Time Analysis by Dataset"
+  ) %>%
+  gt::tab_style(
+    style = gt::cell_text(weight = "bold"),
+    locations = gt::cells_column_labels(everything())
+  )
+
+# Print the formatted table
+publication_table
+
+
+```
+
+# Cost by recommended test group size based on effect size calculation
+
+```{r, echo=FALSE, warning=FALSE, fig.align='left', }
+# Load necessary libraries
+library(tidyverse)
+library(gtsummary)
+library(gt)
+
+# Data from the table
+mean_time_hours <- c(0.5436111, 0.6372778, 1.0236806, 0.4406111)
+mean_cost_euros <- c(6.523333, 7.647333, 12.284167, 5.287333)
+recommended_n_texts <- c(160, 153, 187, 13)  # Recommended n for "Comparison of 8 Texts"
+recommended_n_llms <- c(382, 285, 299, 32)   # Recommended n for "Comparison of LLMs"
+
+# Calculate the cost for each row by multiplying Mean_Cost_Euros with Recommended n
+cost_texts <- mean_cost_euros * recommended_n_texts
+cost_llms <- mean_cost_euros * recommended_n_llms
+
+# Create a data frame to display the results
+results <- tibble(
+  Dataset = c("Results_BinaryDecision 1", "Results_BWS (1)", "Results_AB (2)", "Results_DirectQuality (1)"),
+  Mean_Time_Hours = mean_time_hours,
+  Mean_Cost_Euros = mean_cost_euros,
+  Recommended_n_Texts = recommended_n_texts,
+  Cost_Texts = cost_texts,
+  Recommended_n_LLMs = recommended_n_llms,
+  Cost_LLMs = cost_llms
+)
+
+# Convert the data frame into a publication-ready table with multi-level headers
+publication_table <- results %>%
+  gt() %>%
+  # Add the multi-level header for "Comparison of 8 Texts" and "Comparison of LLMs"
+  gt::cols_label(
+    Dataset = "Dataset",
+    Mean_Time_Hours = "Mean Time (Hours)",
+    Mean_Cost_Euros = "Mean Cost (Euros)",
+    Recommended_n_Texts = "Recommended n",
+    Cost_Texts = "Cost",
+    Recommended_n_LLMs = "Recommended n",
+    Cost_LLMs = "Cost"
+  ) %>%
+  gt::tab_spanner(
+    label = "Comparison of 8 Texts",
+    columns = vars(Recommended_n_Texts, Cost_Texts)
+  ) %>%
+  gt::tab_spanner(
+    label = "Comparison of LLMs",
+    columns = vars(Recommended_n_LLMs, Cost_LLMs)
+  ) %>%
+  # Format the currency columns with the EUR symbol
+  fmt_currency(
+    columns = vars(Mean_Cost_Euros, Cost_Texts, Cost_LLMs),
+    currency = "EUR"
+  ) %>%
+  # Add a title to the table
+  tab_header(
+    title = "Cost and Time Analysis for Comparison of Tests and LLMs"
+  ) %>%
+  # Bold the column labels for clarity
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels(everything())
+  )
+
+# Print the table
+publication_table
+
+```

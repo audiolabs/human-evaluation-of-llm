@@ -1,0 +1,231 @@
+index	answer	cos_score
+llama-2-70b	"The user needs to evaluate the audio quality of a new technology.
+
+The user wants to evaluate the audio quality of an updated version of a technology.
+
+Both 1 & 2
+
+Both 1 & 2 as well as other options.
+
+ <details>
+
+    <summary><b>Question 10</b></summary>
+
+    <div></div>
+
+d. Both 1 & 2 as well as other options.
+
+ </details>
+<br>## Auditing"	0.9185636639595032
+llama-2-70b	Why do people take hearing examinations? To assess their hearing ability.\n\tTo assess whether they have any ear problems.\r\nthey take them because it'll help them know what kinda music sounds best with headphones/earbudz etc.. \rThe reason why people take these kinds o ftestsis so thaycan figure out which type o fmusic sounds better when using headphonez earbudzzetc...the reason y peopl etake thesetestis sothatheycanfigureoutwhichtypeomusicsoundsbetterwhenusingheadphoneseabudzzetcthe reasonewhyppletakehesttestissothatthewcanfiguroutwhichtypemuiscsoundbsbeterwhennusinghedeonseabuzzetctherasonwyppletakethesttestissothtwcanfiguorutwhichtypemuicsoun	0.7823293209075928
+llama-2-70b	"Given this excerpt ""Listening Tests As part of our user research activities, we conduct listening tests or provide support in this area. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test"". please answer the following question truthfully: ""Why are listening tests conducted?"" 
+    # 
+    # The expected answer is: ""Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version.""
+    # 
+    # This is an example of a question that is not answered correctly.
+    # 
+    # Given this excerpt ""Listening Tests As part of our user research activities, we conduct listening tests or provide support in this area. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test"". please answer the following question truthfully: ""What is the main goal of the listening test?"" 
+    # 
+    # The expected answer is: ""The main goal of the listening"	0.8844205141067505
+llama-2-70b	"
+### Dummy model response (after post-processing with regex and stop string):
+
+| log probability | output string |
+| --------------- | ------------- |
+| -inf | Listening tests are conducted to evaluate audio quality. |
+|"	0.7730317711830139
+llama-2-70b	 1.To evaluate audio quality 2. To evaluate new audio technologies 3. To evaluate updated versions 4. To evaluate audio quality, new audio technologies, and updated versions 5. To evaluate audio quality, new audio technologies, updated versions, and other things 6. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things 7. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things 8. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things 9. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things 10. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things, and other things 11. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things, and other things, and other things 12. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things 13. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things 14. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things 15. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things, and other things 16. To evaluate audio quality, new audio technologies, updated versions, and other things, and other things, and other	0.8443747162818909
+llama-2-70b	" 1) To determine whether users like certain sounds (either positive sounds like music/speech etc., negative sounds such as noise etc.)
+2035395345_Q45 - Please read through all options before answering! In your opinion which statement best describes your current role?
+Please read through all options carefully! In order not only get feedback from people who work with sound but also those interested learning what it takes become one themselves - I'm asking everyone involved here today; Which statement best describe YOUR current role?: I am currently working as someone involved directly within sound design / engineering field OR I am interested learning what it takes become one myself OR Neutral option here because there're many other roles out here too so let'ss just say that whatever fits into these categories would count towards answering correctly :) If none apply then choose 'Other'. Thank You!!!!! :D ***"	0.7603152990341187
+llama-2-70b	"2 points: * Useful: Entertaining: 3 points: 1 point: * Useful: Entertaining: 0 points: * Useful: Entertaining:Please react to the following excerpt to the best of your knowledge and by answering the question ""Why is conformance testing important?"" BECAUSE: “we cannot ensure a precisely defined decoder output which is mandatory to meet all our customers' challenges. That's what we do with conformance testing. Audio quality and performance has a huge impact on the overall product quality. By ensuring conformance we ensure that the decoder exactly meets our customers' expectations of our products."" 2 points: * Useful: Entertaining: 3 points: 1 point: * Useful: Entertaining: 0 points: * Useful: Entertaining:Please react to the following excerpt to the best of your knowledge and by answering the question ""How important is conformance testing?"" BECAUSE: ""Audio quality and performance has a huge impact on the overall product quality. That's what we do with conformance testing. Moreover, through conformance testing, we ensure that the core algorithm value of our audio codecs"	0.6848716139793396
+llama-2-70b	""" 1. To test the quality of audio 2. To test the quality of video 3. To test the quality of images 4. To test the quality of text 5. To test the quality of graphics 6. To test the quality of user interface 7. To test the quality of user experience 8. To test the quality of user interface design 9. To test the quality of user interface design 10. To test the quality of user interface design 11. To test the quality of user interface design 12. To test the quality of user interface design 13. To test the quality of user interface design 14. To test the quality of user interface design 15. To test the quality of user interface design 16. To test the quality of user interface design 17. To test the quality of user interface design 18. To test the quality of user interface design 19. To test the quality of user interface design 20. To test the quality of user interface design 21. To test the quality of user interface design 22. To test the quality of user interface design 23. To test the quality of user interface design 24. To test the quality of user interface design 25. To test the quality of user interface design 26. To test the quality of user interface design 27. To test the quality of user interface design 28. To test the quality of user interface design 29. To test the quality of user interface design 30. To test the quality of user interface design 31. To test the quality of user interface design 32. To test the quality of user interface design 33. To test the quality of user interface design 34. To test the quality of user interface design 35. To test the quality of user interface design 36. To test the quality of user interface design 37. To test the quality of user interface design 38. To test the quality of user interface design 39. To test the quality of user interface design 40. To test the quality of user interface design 41. To test the quality of user interface design 42. To test the quality of user interface design 43. To test the quality of user interface design 44. To test the quality of user interface design 45. To test"	0.6860859394073486
+llama-2-70b	 1. To evaluate audio quality. 2. To evaluate the performance of the audio system. 3. To evaluate the user experience of the audio system. 4. To evaluate the audio quality of the audio system. 5. To evaluate the audio quality of the audio system and the user experience of the audio system. 6. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 7. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 8. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 9. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 10. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 11. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 12. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 13. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 14. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 15. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 16. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 17. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 18. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 19. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system. 20. To evaluate the audio quality of the audio system, the performance of the audio system, and the user experience of the audio system.	0.7857151031494141
+llama-2-70b	" 1. To evaluate audio quality 2. To test new audio technologies 3. To test updated versions of audio technologies 4. To test new audio technologies and updated versions of audio technologies 5. To test updated versions of audio technologies and to evaluate audio quality 6. To evaluate audio quality and to test new audio technologies 7. To evaluate audio quality and to test updated versions of audio technologies 8. To test new audio technologies and to evaluate audio quality 9. To test new audio technologies, to test updated versions of audio technologies, and to evaluate audio quality 10. To test new audio technologies, to test updated versions of audio technologies, and to evaluate audio quality
+Given this excerpt ""Listening Tests As part of our user research activities, we conduct listening tests or provide support in this area. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio"	0.8849281072616577
+mistral-7b	"2.) When both external and internal (employees) participants are invited to participate in a listening test, does Emot360 ensure the anonymity of responses from internal participants?
+
+3. We have run into some confusion in the past about 360 Research being about accessibility of experiences as well as technical accessibility. Could you explain this in more detail please? i.e. if someone has made a graphic novel, does the novel itself (content) have to be accessible to everyone? And if so, does it matter if the graphic novel (in this case, let's assume all the"	0.5712537169456482
+mistral-7b	1. to determine whether a certain attribute, e.g., harmonicity, is present or not 2. to determine whether a certain attribute, e.g., harmonicity, is present or not 3. to determine whether a certain attribute, e.g., harmonicity, is present or not 4. to determine whether a certain attribute, e.g., harmonicity, is present or not 5. to determine whether a certain attribute, e.g., harmonicity, is present or not 6. to determine whether a certain attribute, e.g., harmonicity, is present or not 7. to determine whether a certain attribute, e.g., harmonicity, is	0.5273422002792358
+mistral-7b	4. Choose an audio device that could be ideal for the situation in question 2. Justify the choice with an explanation. 5. Select an audio device that is suitable for the situation described in question 2 and draw a solution sketch with a realistic localization of the audio device. In-class individual task for students is making a prototype (set of cards or single cards). This task is completed in the end of the lesson. In-class group task for students is a rating (more information here). The students make the rating in the end of the lesson. Post lesson task for students: individual task to make a video presentation, or group task for students is a game/questionnaire on the topic	0.6301714181900024
+mistral-7b	" The following answers are acceptable: ""Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are conducted to evaluate audio quality. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies"	0.9381961226463318
+mistral-7b	"  The answer is: Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version.
+
+## Answer
+
+Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version.
+
+## Related questions
+
+What is the purpose of the listening test?
+
+Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version.
+
+What is the purpose of the listening test?
+
+Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version.
+
+What is the purpose of the listening test?
+
+Listening tests are"	0.9340144395828247
+mistral-7b	"1. To evaluate audio quality 2. To evaluate audio quality and user experience 3. To evaluate user experience 4. To evaluate audio quality, user experience, and user satisfaction 5. To evaluate audio quality, user experience, and user satisfaction and user experience
+
+The correct answer is ""To evaluate audio quality, user experience, and user satisfaction and user experience"".
+
+### 1.3.2.5. What are the advantages of using a listening test?
+
+A listening test is a way to evaluate the audio quality of a product or service. It can be used to test the quality of a product or service before it is released to the public. A listening test can also be used to test the quality of"	0.8383370637893677
+mistral-7b	" 1. To evaluate the quality of audio recordings. 2. To evaluate the quality of audio technologies. 3. To evaluate the quality of audio systems. 4. To evaluate the quality of audio equipment. 5. To evaluate the quality of audio software.
+
+##### 1 Answer
+
+The correct answer is option 2. Listening tests are conducted to evaluate the quality of audio technologies.
+
+##### Source(s)
+
+https://www.google.com/search?q=Listening+Tests+As+part+of+our+user+research+activities%"	0.8280614614486694
+mistral-7b	"1. To evaluate the audio quality of new audio technologies or an updated version. 2. To determine the best way to present audio content to users. 3. To test the usability of a new audio player. 4. To evaluate the audio quality of a new audio format.
+
+### Answer:
+
+Listening tests are conducted to evaluate the audio quality of new audio technologies or an updated version.
+
+## 10.3.3.1.1.1.2.
+
+### Answer:
+
+Listening tests are conducted to evaluate the audio quality of new audio technologies or an updated version.
+
+## 10.3.3.1.1.2.
+
+### Answer:
+
+Listening tests are conducted to evaluate the audio quality of new audio technologies or an updated version.
+
+## 10.3.3.1.1.2.
+
+### Answer:
+
+Listening tests are conducted to evaluate the audio quality of new audio technologies or an updated version.
+
+## 10.3.3.1.1.2.
+
+### Answer:
+
+Listening tests are conducted to evaluate the audio quality"	0.8978694081306458
+luminous-base	":
+A.
+B.
+C.
+D.
+E."	0.24246227741241455
+luminous-base	":
+A.
+B.
+C.
+D.
+E.
+F.
+G.
+H.
+I.
+J.
+K.
+L.
+M.
+N.
+O.
+P.
+Q.
+R.
+S.
+T.
+U."	0.30967849493026733
+luminous-base	"A. To evaluate audio quality B. To evaluate the usability of the audio C. To evaluate the audio quality and usability D. To evaluate the audio quality and usability and to evaluate the usability of the audio
+
+A. To evaluate audio quality B. To evaluate the usability of the audio C. To evaluate"	0.7914246916770935
+luminous-base	":
+
+To evaluate audio quality
+
+To evaluate the usability of the audio system
+
+To evaluate the usability of the audio system and the audio quality
+
+To evaluate the usability of the audio system and the audio quality and the audio quality
+
+To evaluate the usability of the audio system and the audio quality and"	0.8269187211990356
+luminous-base	":
+
+To evaluate audio quality, e.g. for new audio technologies or an updated version. To evaluate the usability of the audio system, e.g. to identify problems with the user interface or to find out if users are able to understand the system correctly. To evaluate the user experience of using the audio"	0.9226444959640503
+luminous-base	":
+.2.3.1  Listening Tests for New Audio Technologies or an Updated Version We conduct listening tests to evaluate audio quality, e.g. for new audio technologies or an updated version of the product (e.g., a new version of the product).
+Chapter
+The User Experience Design"	0.9329107999801636
+luminous-base	":
+
+To evaluate audio quality
+
+To evaluate the usability of the audio system
+
+To evaluate the usability of the audio system and the audio quality
+
+To evaluate the usability of the audio system and the audio quality and the audio quality"	0.8301815986633301
+luminous-base	":
+.2.3.1  Listening Tests for New Audio Technologies or an Updated Version We conduct listening tests to evaluate audio quality, e.g. for new audio technologies or an"	0.9363804459571838
+luminous-base	":
+.2.3.1  Listening Tests for New Audio Technologies or an Updated Version We conduct listening tests to evaluate audio quality, e.g. for new audio technologies or an updated version of the product (e.g.,"	0.9396934509277344
+luminous-base	":
+.2.3.1  Listening Tests for New Audio Technologies or an Updated Version We conduct listening tests to evaluate audio quality, e.g. for new audio technologies or an updated version of the product (e.g., a new version of the product).
+Chapter
+The User Experience Design"	0.9329107999801636
+ChatGPT-4-0613	Listening tests are conducted to evaluate audio quality. This can involve assessing new audio technologies or updated versions of existing technologies. The primary goal is to understand how well an audio product performs in terms of sound quality, which is crucial for further development and refinement of audio products.	0.9417274594306946
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated audio technologies. This process is essential in user research activities to ensure that the audio products meet the desired standards and provide an optimal listening experience for users.	0.9098480939865112
+ChatGPT-4-0613	Listening tests are conducted to evaluate audio quality, particularly for new audio technologies or updated versions. These tests are designed to assess how well an audio system performs and ensure that the quality meets certain standards before the product is finalized or released. This helps in refining audio products to provide better user experiences.	0.9303556084632874
+ChatGPT-4-0613	Listening tests are conducted primarily to evaluate audio quality. They are used to assess new audio technologies or updated versions of existing technologies to ensure that the audio output meets certain standards and provides a satisfactory experience for users. These tests can help identify any flaws or areas for improvement in the audio technology being tested.	0.9206383228302002
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated audio technologies. These tests are part of user research activities that help determine how well these technologies perform in terms of sound quality, ensuring they meet the necessary standards and provide a satisfactory user experience.	0.913055956363678
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated audio technologies. These tests are part of user research activities aimed at assessing how well these technologies meet the expected standards of sound quality. This helps in refining audio products and ensuring they deliver an optimal audio experience to users.	0.9252696633338928
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated audio technologies. These tests help ensure that the technologies meet the required standards and perform well from an auditory perspective. This is an essential part of user research activities aimed at improving user experience with audio products.	0.8872483372688293
+ChatGPT-4-0613	Listening tests are conducted as part of user research activities to evaluate the audio quality of new audio technologies or updated versions of existing technologies. These tests help in understanding how well the audio products perform and meet user expectations in terms of sound quality. This evaluation is crucial for the development and improvement of audio technologies.	0.9107809066772461
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated audio technologies. This is part of user research activities aimed at ensuring these technologies meet the desired standards for sound quality. The tests help identify any deficiencies and provide insights into how the audio system performs under different conditions, facilitating improvements before the technology is finalized and released to the market.	0.9186992645263672
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated audio technologies. They are part of user research activities aimed at assessing how well these technologies perform in terms of sound quality. This helps in ensuring that the audio products meet the desired standards and user expectations before they are finalized and released to the market. Conducting these tests also allows developers to identify and address potential issues in the audio output, enhancing the overall user experience.	0.8846660852432251
+llama-2-70b	"""The purpose of listening tests is to assess the perceived audio quality of new audio technologies or an updated version. Listening tests are used to measure the perceived audio quality and to evaluate the perceived difference between two audio signals. Listening tests are also used to evaluate the perceived quality of audio signals processed by an audio codec. The results of listening tests can be used to evaluate the performance of an audio codec and to identify areas for improvement."""	0.9519859552383423
+llama-2-70b	"""Listening tests are conducted to evaluate the audio quality of a new audio technology or an updated version. They are specifically designed to assess how well the audio technology performs in terms of sound quality, clarity, and other audio-related metrics. Listening tests are typically conducted by playing audio samples to a group of participants and asking them to rate the quality of the audio on a scale. The results of the listening tests can be used to identify areas for improvement and to make informed decisions about the development and implementation of new audio technologies."""	0.9214401245117188
+llama-2-70b	"""Listening tests are conducted to evaluate the perceived audio quality of new audio technologies or updated versions of existing technologies. Listening tests are the best way to measure how people perceive audio quality, and the results can be used to make improvements to the technology or to make decisions about which technology to use."""	0.9083041548728943
+llama-2-70b	Listening tests are conducted to evaluate the perceived audio quality of a given audio signal. This can be a new audio technology, a new audio product, an updated version of an existing product, or an audio signal that is affected by an audio processing algorithm. The test participants listen to a set of audio signals and rate the perceived audio quality on a given scale. The results of the test can be used to compare the perceived audio quality of different audio signals or to evaluate the effectiveness of an audio processing algorithm.	0.916069746017456
+llama-2-70b	Listening tests are conducted to evaluate the perceived audio quality of a system, a codec, a new technology, etc. The results are then used to optimize the system or technology.	0.9161837697029114
+llama-2-70b	Listening tests are conducted to evaluate the perceived audio quality of different audio technologies. They can be used to compare different audio codecs, different bitrates, or different versions of the same audio codec. The results of listening tests can be used to make informed decisions about which audio technology to use in a particular application.	0.8658236861228943
+llama-2-70b	Listening tests are conducted to evaluate the audio quality of a specific technology or a specific version of a technology. The results of the listening tests can be used to make decisions about the technology or to improve the technology. The results of the listening tests can also be used to compare the audio quality of different technologies or versions of the same technology. Listening tests are conducted in a controlled environment, with participants listening to audio samples and rating the audio quality on a scale. The results of the listening tests are then analyzed to determine the overall audio quality of the technology or version being tested.	0.8687043190002441
+llama-2-70b	Listening tests are conducted to evaluate audio quality. They are used to compare the audio quality of different technologies or versions, e.g. a new audio codec or an updated version of an existing one. The results of the listening test can be used to determine which technology or version provides the best audio quality.	0.9163545370101929
+llama-2-70b	Listening tests are conducted to evaluate audio quality. This can be done for new audio technologies, an updated version, or for a new feature. Listening tests are also conducted to evaluate the audio quality of different audio devices. For example, a listening test can be conducted to evaluate the audio quality of a new headphone.	0.921311616897583
+llama-2-70b	Listening tests are conducted to evaluate the perceived audio quality of new audio technologies or an updated version. This is done to ensure that the new technology or version is at least as good as the previous one, or to identify areas for improvement. Listening tests can also be used to compare different audio technologies or versions to determine which one performs better.	0.8943533897399902
+mistral-7b	"""Listening tests are used to evaluate audio quality. This can be for new audio technologies or an updated version. Listening tests are conducted to ensure that the audio quality is as good as possible and meets the requirements of the target audience. The results of the listening tests can also be used to improve the audio quality further."""	0.8940480947494507
+mistral-7b	"""Listening tests are conducted to evaluate audio quality. The goal is to identify whether the audio quality of a new technology or an updated version is better than the current audio quality. Listening tests are conducted to help audio engineers and audio quality managers make informed decisions about audio quality."""	0.9386322498321533
+mistral-7b	"""Listening tests are conducted to measure audio quality. The results of listening tests can be used to compare audio quality of different audio technologies or to evaluate an updated version of a technology. The results can also be used to improve audio technologies."	0.9001302719116211
+mistral-7b	Listening tests are conducted to evaluate audio quality. The results of listening tests are used to determine whether an audio system is ready for market, whether a new technology is better than an existing one, or whether an updated version is better than the previous one. Listening tests are also used to determine whether a system meets the requirements of a specific application, such as the audio quality of a conference system.	0.9136838912963867
+mistral-7b	Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test	0.9272486567497253
+mistral-7b	Listening tests are conducted to evaluate audio quality. This can be done in a controlled environment with a large number of participants, or in a smaller group with a more specific target group. Listening tests are used to determine how well a new audio technology is received by users, or to compare different audio technologies or versions. They are also used to gather feedback on audio quality and to identify areas for improvement.	0.8712665438652039
+mistral-7b	Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version. They are an important part of our user research activities. They help us to understand the audio quality and to improve it. The results of the listening tests are used to evaluate the audio quality and to make improvements.	0.8893370032310486
+mistral-7b	Listening tests are conducted to evaluate the quality of audio content, such as music, speech, or sound effects. They are used to determine whether the audio content meets certain quality standards or to compare different versions of the same content. Listening tests can also be used to gather feedback from users or to evaluate the effectiveness of audio technologies.	0.857237696647644
+mistral-7b	" ""Listening tests are conducted to assess the quality of audio technologies, products, or services. They are used to compare different audio systems or to evaluate the performance of a new audio technology. Listening tests can also be used to identify areas for improvement and to optimize the audio experience for users. By conducting listening tests, we can ensure that the audio quality meets the highest standards and that users have a positive experience when using our audio technologies, products, or services."""	0.8902789354324341
+mistral-7b	Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version. They help us to understand the user's perception of audio quality, to find out which audio quality is preferred by the user and to identify areas for improvement.	0.9321397542953491
+luminous-base	Listening tests are conducted to evaluate audio quality. This is important for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test	0.8900409936904907
+luminous-base	Listening tests are conducted to evaluate audio quality or to test the usability of new audio technologies. We conduct listening tests for our own products, but also for customers. We can help you with listening tests for your products and applications. We can also help you with the design of the test, the requirements, and the evaluation of the results.	0.8381867408752441
+luminous-base	Listening tests are conducted to evaluate the audio quality, particularly for new audio technologies or updated versions. This is done as part of the user research activities.	0.9175342321395874
+luminous-base	"""Listening tests are conducted to evaluate audio quality or to provide support in this area. Listening tests are specifically designed to evaluate audio quality, e.g. for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test"""	0.913063108921051
+luminous-base	"""Listening tests are conducted to evaluate audio quality, e.g. for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test"""	0.8889469504356384
+luminous-base	"""Listening tests are conducted to evaluate audio quality. This is particularly important for new audio technologies or an updated version. The listening test is a way to evaluate the audio quality and to ensure that the audio quality meets the requirements and expectations of the users. The listening test is also a way to gather user feedback and to identify potential issues that might occur during the use of the audio technology. The results of the listening test will be used to make design decisions and to improve the audio quality of the audio technology."""	0.9170383214950562
+luminous-base	"""We conduct listening tests to evaluate audio quality, e.g. for new audio technologies or an updated version. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test"""	0.8740508556365967
+luminous-base	"""Listening tests are conducted to evaluate the audio quality of a product. This includes the audio quality of a product's audio output and the audio quality of the audio input"	0.8603206872940063
+luminous-base	"""Listening tests are conducted to evaluate the audio quality of a new audio technology or an updated version. They are also conducted to evaluate the audio quality of a new audio product or service. Clicking on this box will direct you to the listening test sub-page where you can find more detailed information about the different tests, requirements, and how to reach us if you want to conduct a listening test"""	0.9075255393981934
+luminous-base	"""Listening tests are conducted to evaluate audio quality. This is particularly important for new audio technologies or an updated version. The listening test is conducted by a group of people who are not familiar with the product or the technology. They are asked to listen to a short audio clip and rate the audio quality on a scale from 1 to 5, where 1 is poor and 5 is excellent. The test is conducted in a controlled environment, e.g. a room with no distractions, and the participants are asked to listen to the audio clip for a specific amount of time. The test results are then analyzed to identify any issues with the audio quality. The listening test results are used to improve the audio quality of the product or the technology."""	0.7302953004837036
+ChatGPT-4-0613	Listening tests are conducted to evaluate the quality of audio technologies. This could involve testing a new product or technology, or an updated version of a current one. The purpose is to ensure that the audio quality meets the necessary standards and provides the best possible experience for the user. These tests can provide valuable data and feedback that can be used for product enhancements and improvements.	0.8996768593788147
+ChatGPT-4-0613	Listening tests are conducted as part of user research to assess and evaluate the audio quality of new or updated audio technologies. They help in determining how well the sound quality is perceived by users and if there are any aspects that can be improved. The tests ensure that the audio devices deliver optimal auditory experience for their intended uses. The collected data and feedback help manufacturers in product development to meet or exceed user expectations and industry standards.	0.9028506278991699
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or existing technologies. The aim is to understand or analyze how the sounds produced by these technologies are perceived by the human ear. This data is crucial for developers and researchers to understand the strengths and limitations of their audio systems and make necessary improvements. They help ensure that the offered audio quality meets the necessary standards and user expectations. It aids companies in refining their technologies to provide the best possible user experience.	0.8768169283866882
+ChatGPT-4-0613	Listening tests are conducted to evaluate the audio quality of new or updated technologies. These tests are crucial in understanding how the sound is perceived by users, which can considerably vary depending on the technology used. The gathered data can uncover insights about the auditory performance of the product, helping the developers make necessary changes or improvements. This, in turn, ensures that end-users receive a product with optimum audio quality, enhancing their overall experience.	0.8896557092666626
+ChatGPT-4-0613	Listening tests are conducted to evaluate and improve the audio quality of new or updated technologies. They are an essential part of user research, helping to ensure that the product meets the desired standards and provides an excellent auditory experience for the user. By conducting these tests, manufacturers can gather valuable feedback and data, which they can then use to refine their product, ensure it meets customers' needs and expectations, and ultimately enhance the user experience.	0.8403416872024536
+ChatGPT-4-0613	Listening tests are conducted to assess the audio quality of new or updated audio technologies. They serve as a critical component of user research activities as they allow the evaluators to make informed decisions about the clarity, volume, sharpness, and overall quality of sound that is produced. The findings from these tests can provide valuable insights and feedback, aiding in the improvement and refinement of the technology. They ensure that the developed or updated audio technologies meet the intended standards and user expectations for sound quality.	0.8825399875640869
+ChatGPT-4-0613	Listening tests are conducted as a key element of user research in order to evaluate audio quality, particularly for new audio technologies or updated versions. The goal of these tests is to assess how the human ear perceives various aspects of a sound produced by a specific technology. Insight gathered from these tests can be invaluable in making improvements, adjustments, or corrections to the technology to ensure premium sound quality and optimal user experience. The tests help manufacturers and developers confirm that their product meets the necessary requirements and standards of sound quality.	0.9014793634414673
+ChatGPT-4-0613	Listening tests are conducted primarily to evaluate and better understand the audio quality of new or updated technologies. The goal is to gain a full understanding of how users perceive sound, and the results of these tests are often crucial in making decisions about product development and improvements. Through listening tests, developers can identify any potential areas of improvement, thereby ensuring the audio technology provides the best possible experience for its intended users.	0.8582632541656494
+ChatGPT-4-0613	Listening tests are carried out to understand the audio quality of new or updated technologies. The purpose of these tests is to analyze how users perceive and react to the sound quality. The insight gained from these tests is used to improve and optimize the audio experience for users. By conducting these tests, developers can tweak their products based on real user feedback, thereby ensuring that their technology or product meets the expectations and needs of the user. This is what makes listening tests a crucial part of the research and development process in audio technology.	0.8771855235099792
+ChatGPT-4-0613	Listening tests are conducted to assess the audio quality of new or existing audio technologies. The purpose of these tests is to evaluate how sound produced by these technologies is perceived by users, reflecting on aspects like clarity, consistency, dynamic range and other parameters that contribute to the overall audio experience. This helps developers and researchers identify areas for improvement, optimize performance, and ensure the product meets or surpasses the expected standards of sound quality.	0.9278989434242249

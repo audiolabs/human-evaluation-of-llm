@@ -1,0 +1,786 @@
+---
+title: "Correlation_BERT_Ranking"
+author: "Emily Kratsch"
+format: html
+editor: visual
+---
+
+# All 8 Items
+
+## DQE:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+dqe <- c(3.98, 3.9, 4.18, 1.6, 4.02, 1.42, 4.22, 1.4)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, dqe, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$dqe)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$dqe, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+### Visualisation
+
+```{r}
+# Step 2: Rank the data
+ranked_dqe <- rank(data$dqe)
+ranked_cosine_score <- rank(data$cosine_score)
+
+# Step 3: Visualize the ranked data with a scatter plot
+plot(ranked_dqe, ranked_cosine_score, 
+     main = "Scatterplot of Ranked DQE vs. Ranked Cosine Score",
+     xlab = "Ranked DQE", 
+     ylab = "Ranked Cosine Score",
+     pch = 19, col = "blue")
+
+# Add a LOESS smooth line to show the trend in ranks
+lines(loess.smooth(ranked_dqe, ranked_cosine_score), col = "red", lwd = 2)
+
+# Optional: Jitter the points to better visualize any overlapping ranks
+plot(jitter(ranked_dqe), jitter(ranked_cosine_score), 
+     main = "Jittered Scatterplot of Ranked DQE vs. Ranked Cosine Score",
+     xlab = "Ranked DQE (Jittered)", 
+     ylab = "Ranked Cosine Score (Jittered)",
+     pch = 19, col = "blue")
+
+# Add LOESS smooth line to jittered plot
+lines(loess.smooth(jitter(ranked_dqe), jitter(ranked_cosine_score)), col = "red", lwd = 2)
+```
+
+## DQE Honesty:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+dqeH <- c(3.72, 3.52, 4.12, 1.52, 4.00, 1.20, 3.76, 1.12)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, dqeH, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$dqeH)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$dqeH, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## DQE Comprehensibility:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+dqeC <- c(4.24, 4.28, 4.24, 1.68, 4.04, 1.64, 4.78, 1.68)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, dqeC, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$dqeC)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$dqeC, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## Binary Decision Analysis
+
+### Kendall Coorelation
+
+```{r}
+# Data preparation
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+bdscore <- c(42, 35, 47, 6, 38, 8, 45, 6)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+data <- data.frame(items, bdscore, cosine_score)
+
+# Normality tests
+shapiro_test_bdscore <- shapiro.test(data$bdscore)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results
+shapiro_test_bdscore
+shapiro_test_cosine
+
+```
+
+```{r}
+# Step 2: Perform Kendall's Tau correlation test
+kendall_test <- cor.test(data$bdscore, data$cosine_score, method = "kendall", alternative = "greater")
+
+# Print the Kendall's Tau test result
+print(kendall_test)
+
+```
+
+### Visualisation
+
+```{r}
+# Step 3: Rank the data
+ranked_bdscore <- rank(data$bdscore)
+ranked_cosine_score <- rank(data$cosine_score)
+
+# Step 4: Visualize the ranked data with a scatter plot
+plot(ranked_bdscore, ranked_cosine_score, 
+     main = "Scatterplot of Ranked BDScore vs. Ranked Cosine Score",
+     xlab = "Ranked BDScore", 
+     ylab = "Ranked Cosine Score",
+     pch = 19, col = "blue")
+
+# Add a LOESS smooth line to show the trend in ranks
+lines(loess.smooth(ranked_bdscore, ranked_cosine_score), col = "red", lwd = 2)
+
+# Optional: Jitter the points to better visualize any overlapping ranks
+plot(jitter(ranked_bdscore), jitter(ranked_cosine_score), 
+     main = "Jittered Scatterplot of Ranked BDScore vs. Ranked Cosine Score",
+     xlab = "Ranked BDScore (Jittered)", 
+     ylab = "Ranked Cosine Score (Jittered)",
+     pch = 19, col = "blue")
+
+# Add LOESS smooth line to jittered plot
+lines(loess.smooth(jitter(ranked_bdscore), jitter(ranked_cosine_score)), col = "red", lwd = 2)
+```
+
+## Binary Dec Honesty:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+bdscoreH <- c(19, 13, 24, 2, 16, 2, 20, 0)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, bdscoreH, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$bdscoreH)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$bdscoreH, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## Binary Dec Comprehensibility:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+bdscoreC <- c(23, 22, 23, 4, 22, 6, 25, 6)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, bdscoreC, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$bdscoreC)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$bdscoreC, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## A/B test:
+
+### Kendall Coorelation
+
+```{r}
+# Step 1: Prepare the new data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+abscore <- c(177, 156, 206, 20, 204, 11, 233, 16)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 
+                  0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 
+                  0.9175342321395874, 0.24246227741241455)
+
+# Combine into a data frame
+data <- data.frame(items, abscore, cosine_score)
+```
+
+```{r}
+# Step 2: Check for normality using Shapiro-Wilk test
+shapiro_test_abscore <- shapiro.test(data$abscore)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results of normality tests
+print(shapiro_test_abscore)
+print(shapiro_test_cosine)
+```
+
+```{r}
+# Step 3: Perform Kendall's Tau correlation test (due to potential non-normality and ties)
+kendall_test <- cor.test(data$abscore, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+
+```
+
+### Visualisation
+
+```{r}
+# Step 1: Rank the data
+ranked_abscore <- rank(data$abscore)
+ranked_cosine_score <- rank(data$cosine_score)
+
+# Step 2: Visualize the ranked data with a scatter plot
+plot(ranked_abscore, ranked_cosine_score, 
+     main = "Scatterplot of Ranked ABScore vs. Ranked Cosine Score",
+     xlab = "Ranked ABScore", 
+     ylab = "Ranked Cosine Score",
+     pch = 19, col = "blue")
+
+# Step 3: Add a LOESS smooth line to show the trend in ranks
+lines(loess.smooth(ranked_abscore, ranked_cosine_score), col = "red", lwd = 2)
+
+# Optional: Jitter the points to better visualize any overlapping ranks
+plot(jitter(ranked_abscore), jitter(ranked_cosine_score), 
+     main = "Jittered Scatterplot of Ranked ABScore vs. Ranked Cosine Score",
+     xlab = "Ranked ABScore (Jittered)", 
+     ylab = "Ranked Cosine Score (Jittered)",
+     pch = 19, col = "blue")
+
+# Step 4: Add LOESS smooth line to jittered plot
+lines(loess.smooth(jitter(ranked_abscore), jitter(ranked_cosine_score)), col = "red", lwd = 2)
+
+```
+
+### Visualisation raw Data
+
+```{r}
+# Step 4: Visualize the results with a scatter plot and trend lines
+plot(data$abscore, data$cosine_score, 
+     main = "Scatterplot of ABScore vs. Cosine Score", 
+     xlab = "ABScore", 
+     ylab = "Cosine Score", 
+     pch = 19, col = "blue")
+
+# Add a LOESS smooth line to show the trend
+lines(loess.smooth(data$abscore, data$cosine_score), col = "red", lwd = 2)
+
+# Optional: Add a linear regression line to show the general trend
+#abline(lm(cosine_score ~ abscore, data = data), col = "green")
+```
+
+## AB Honesty:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+abscoreH <- c(101, 79, 117, 18, 117, 0, 133, 0)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, abscoreH, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$abscoreH)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$abscoreH, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## AB Comprehensibility:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+abscoreC <- c(76, 77, 89, 2, 87, 11, 100, 16)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, abscoreC, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$abscoreC)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$abscoreC, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## BWS: Kendalls Tau
+
+### Kendall Coorelation
+
+```{r}
+# Step 1: Prepare the new data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+bwsscore <- c(25, 19, 29, -44, 30, -36, 31, -54)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 
+                  0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 
+                  0.9175342321395874, 0.24246227741241455)
+
+# Combine into a data frame
+data <- data.frame(items, bwsscore, cosine_score)
+```
+
+```{r}
+# Step 2: Check for normality using Shapiro-Wilk test
+shapiro_test_bwsscore <- shapiro.test(data$bwsscore)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results of normality tests
+print(shapiro_test_bwsscore)
+print(shapiro_test_cosine)
+```
+
+```{r}
+# Step 3: Perform Kendall's Tau correlation test
+kendall_test <- cor.test(data$bwsscore, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+### Visualisation
+
+```{r}
+# Step 1: Rank the data
+ranked_bwsscore <- rank(data$bwsscore)
+ranked_cosine_score <- rank(data$cosine_score)
+
+# Step 2: Visualize the ranked data with a scatter plot
+plot(ranked_bwsscore, ranked_cosine_score, 
+     main = "Scatterplot of Ranked BWSScore vs. Ranked Cosine Score",
+     xlab = "Ranked BWSScore", 
+     ylab = "Ranked Cosine Score",
+     pch = 19, col = "blue")
+
+# Step 3: Add a LOESS smooth line to show the trend in ranks
+lines(loess.smooth(ranked_bwsscore, ranked_cosine_score), col = "red", lwd = 2)
+
+# Optional: Jitter the points to better visualize any overlapping ranks
+plot(jitter(ranked_bwsscore), jitter(ranked_cosine_score), 
+     main = "Jittered Scatterplot of Ranked BWSScore vs. Ranked Cosine Score",
+     xlab = "Ranked BWSScore (Jittered)", 
+     ylab = "Ranked Cosine Score (Jittered)",
+     pch = 19, col = "blue")
+
+# Step 4: Add LOESS smooth line to jittered plot
+lines(loess.smooth(jitter(ranked_bwsscore), jitter(ranked_cosine_score)), col = "red", lwd = 2)
+
+```
+
+### Visualisation raw data
+
+```{r}
+# Step 4: Visualize the results with a scatter plot and trend lines
+plot(data$bwsscore, data$cosine_score, 
+     main = "Scatterplot of BWSScore vs. Cosine Score", 
+     xlab = "BWSScore", 
+     ylab = "Cosine Score", 
+     pch = 19, col = "blue")
+
+# Add a LOESS smooth line to show the trend
+lines(loess.smooth(data$bwsscore, data$cosine_score), col = "red", lwd = 2)
+
+# Optional: Add a linear regression line to show the general trend
+#abline(lm(cosine_score ~ bwsscore, data = data), col = "green")
+```
+
+## BWS Honesty:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+bwsscoreH <- c(7, 5, 15, -25, 16, -12, 21, -27)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, bwsscoreH, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$bwsscoreH)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$bwsscoreH, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+## BWS Comprehensibility:
+
+### Kendall Correlation
+
+```{r}
+# Step 1: Create the data
+items <- c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8")
+bwsscoreC <- c(18, 14, 14, -19, 14, -24, 10, -27)
+cosine_score <- c(0.9417274594306946, 0.8403416872024536, 0.9163545370101929, 0.6848716139793396, 0.9321397542953491, 0.5273422002792358, 0.9175342321395874, 0.24246227741241455)
+
+```
+
+```{r}
+# Step 2: Create a data frame
+data <- data.frame(items, bwsscoreC, cosine_score)
+
+
+```
+
+```{r}
+# Step 3 Normality 
+shapiro.test(data$bwsscoreC)
+shapiro.test(data$cosine_score)
+
+
+```
+
+```{r}
+# Step 1: Perform Kendall's Tau hypothesis test
+kendall_test <- cor.test(data$bwsscoreC, data$cosine_score, method = "kendall", alternative = "greater")
+print(kendall_test)
+```
+
+# 4 LLMs
+
+## DQE
+
+### Kendall Coorelation
+
+```{r}
+# Data preparation
+items <- c("T1", "T2", "T3", "T4")
+dqe <- c(3.94, 2.89, 2.72, 3.81)
+cosine_score <- c(1.782069147, 1.601226151, 1.459481955, 1.15999651)
+
+data <- data.frame(items, dqe, cosine_score)
+```
+
+```{r}
+# Normality tests
+shapiro_test_dqe <- shapiro.test(data$dqe)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results
+shapiro_test_dqe
+shapiro_test_cosine
+
+```
+
+```{r}
+# Step 2: Perform Kendall's Tau correlation test
+kendall_test <- cor.test(data$dqe, data$cosine_score, method = "kendall", alternative = "greater")
+
+# Print the Kendall's Tau test result
+print(kendall_test)
+## Binary Decision Analysis
+### Kendall Coorelation
+
+```
+
+## Binary Decision Analysis
+
+### Kendall Coorelation
+
+```{r}
+# Data preparation
+items <- c("T1", "T2", "T3", "T4")
+bdscore <- c(77, 53, 46, 51)
+cosine_score <- c(1.782069147, 1.601226151, 1.459481955, 1.15999651)
+
+data <- data.frame(items, bdscore, cosine_score)
+```
+
+```{r}
+# Normality tests
+shapiro_test_bdscore <- shapiro.test(data$bdscore)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results
+shapiro_test_bdscore
+shapiro_test_cosine
+
+```
+
+```{r}
+# Step 2: Perform Kendall's Tau correlation test
+kendall_test <- cor.test(data$bdscore, data$cosine_score, method = "kendall", alternative = "greater")
+
+# Print the Kendall's Tau test result
+print(kendall_test)
+## Binary Decision Analysis
+### Kendall Coorelation
+
+```
+
+## A/B test:
+
+### Kendall Coorelation
+
+```{r}
+# Data preparation
+items <- c("T1", "T2", "T3", "T4")
+abscore <- c(333, 226, 215, 249)
+cosine_score <- c(1.782069147, 1.601226151, 1.459481955, 1.15999651)
+
+data <- data.frame(items, abscore, cosine_score)
+```
+
+```{r}
+# Normality tests
+shapiro_test_abscore <- shapiro.test(data$abscore)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results
+shapiro_test_abscore
+shapiro_test_cosine
+
+```
+
+```{r}
+# Step 2: Perform Kendall's Tau correlation test
+kendall_test <- cor.test(data$abscore, data$cosine_score, method = "kendall", alternative = "greater")
+
+# Print the Kendall's Tau test result
+print(kendall_test)
+## Binary Decision Analysis
+### Kendall Coorelation
+
+```
+
+## BWS
+
+### Kendall Coorelation
+
+```{r}
+# Data preparation
+items <- c("T1", "T2", "T3", "T4")
+bwsscore <- c(44, -15, -6, -13)
+cosine_score <- c(1.782069147, 1.601226151, 1.459481955, 1.15999651)
+
+data <- data.frame(items, bwsscore, cosine_score)
+```
+
+```{r}
+# Normality tests
+shapiro_test_bwsscore <- shapiro.test(data$bwsscore)
+shapiro_test_cosine <- shapiro.test(data$cosine_score)
+
+# Print results
+shapiro_test_bwsscore
+shapiro_test_cosine
+
+```
+
+```{r}
+# Step 2: Perform Kendall's Tau correlation test
+kendall_test <- cor.test(data$bwsscore, data$cosine_score, method = "kendall", alternative = "greater")
+
+# Print the Kendall's Tau test result
+print(kendall_test)
+## Binary Decision Analysis
+### Kendall Coorelation
+
+```
+
+Tabllen
+
+```{r}
+library(flextable)
+library(officer)
+library(dplyr)
+
+# Step 2: Create the data frame
+data <- data.frame(
+  Items = c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8"),
+  DQE = c(3.98, 3.90, 4.18, 1.60, 4.02, 1.42, 4.22, 1.40),
+  BDScore = c(42, 35, 47, 6, 38, 8, 45, 6),
+  ABScore = c(177, 156, 206, 20, 204, 11, 233, 16),
+  BWSScore = c(25, 19, 29, -44, 30, -36, 31, -54),
+  Cosine_Score = c(0.9417, 0.8403, 0.9164, 0.6849, 0.9321, 0.5273, 0.9175, 0.2425)
+)
+
+# Step 3: Create a flextable (APA style)
+apa_table <- flextable(data) %>%
+  theme_box() %>%
+  set_table_properties(width = 0.5, layout = "autofit") %>%
+  set_header_labels(
+    Items = "Items", 
+    DQE = "DQE", 
+    BDScore = "BDScore", 
+    ABScore = "ABScore", 
+    BWSScore = "BWSScore", 
+    Cosine_Score = "Cosine Score"
+  ) %>%
+  colformat_num(j = c("DQE", "Cosine_Score"), digits = 2) %>%  # Format numbers to 2 decimal places
+  align(j = c("DQE", "BDScore", "ABScore", "BWSScore", "Cosine_Score"), align = "center") %>%
+  autofit()
+
+# Step 4: Save as Word document
+doc <- read_docx() %>%
+  body_add_flextable(value = apa_table)
+
+# Save to file
+print(doc, target = "APA_Style_Table.docx")
+```
+
+```{r}
+
+# Load necessary libraries
+##library(gt)
+
+# Step 1: Prepare the data frame
+#data <- tibble(
+#  Items = c("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8"),
+#  DQE = c(3.98, 3.90, 4.18, 1.60, 4.02, 1.42, 4.22, 1.40),
+#  BDScore = c(42, 35, 47, 6, 38, 8, 45, 6),
+#  ABScore = c(177, 156, 206, 20, 204, 11, 233, 16),
+#  BWSScore = c(25, 19, 29, -44, 30, -36, 31, -54),
+#  Cosine_Score = c(0.9417, 0.8403, 0.9164, 0.6849, 0.9321, 0.5273, 0.9175, 0.2425)
+#)
+
+# Step 2: Create the APA-style table using gt
+#apa_table <- data %>%
+#  gt() %>%
+#  gt::cols_label(
+#    Items = "Items",
+#    DQE = "DQE",
+#    BDScore = "BDScore",
+#    ABScore = "ABScore",
+#    BWSScore = "BWSScore",
+#    Cosine_Score = "Cosine Score"
+#  ) %>%
+#  gt::fmt_number(columns = vars(DQE, Cosine_Score), decimals = 4) %>%
+#  gt::tab_header(
+#    title = "Mean Test Scores and Cosine Score per Generated Text"
+#  ) %>%
+#  gt::tab_style(
+#    style = cell_text(weight = "bold"),
+#    locations = cells_column_labels(everything())
+#  ) %>%
+#  gt::tab_options(
+#    table.font.size = 12,
+#    heading.align = "center"
+#  )
+
+# Print the table
+#apa_table
+
+# Optionally save the table as an image or HTML
+#gtsave(apa_table, "MeansTable.docx")
+
+
+```
