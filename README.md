@@ -186,3 +186,6 @@ The visualizations of the BIBD configurations are provided in the attached image
 - **BIBD2.png**: Comprehensibility
 
 ---
+## Results for Study Reproduction
+
+The file Tables_Results_for_Study_Reproduction_Methods_LLM.pdf contains detailed results that we deem useful for identifying differences and similarities when this study is reproduced. 
